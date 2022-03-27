@@ -1,4 +1,3 @@
-
 from django.http import Http404
 
 from django.views.generic import ListView, DetailView
@@ -27,7 +26,6 @@ class ProductListView(ListView):
     #     context = super(ProductListView, self).get_context_data(*args, **kwargs)
     #     print(context)
     #     return context
-
 
 #Function Based View
 def product_list_view(request):
@@ -68,7 +66,6 @@ class ProductDetailView(DetailView):
         if instance is None:
             raise Http404("Esse produto não existe!")
         return instance
-
 
 #Function Based View
 def product_detail_view(request, pk = None, *args, **kwargs):
